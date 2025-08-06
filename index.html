@@ -1,65 +1,120 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Scarica NVS</title>
-    <style>
-        body {
-            background-color: #000;
-            color: #aaa;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Scarica NVS</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-        .container {
-            text-align: center;
-            padding: 20px;
-            border: 1px solid #333;
-            border-radius: 10px;
-            background-color: #111;
-        }
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
 
-        h1 {
-            color: #ccc;
-        }
+  .container {
+    background: rgba(20, 20, 20, 0.85);
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    max-width: 400px;
+    text-align: center;
+    backdrop-filter: blur(6px);
+  }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            margin: 20px 10px;
-            font-size: 16px;
-            background-color: #333;
-            color: #eee;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
+  h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    color: #f0a500;
+    text-shadow: 0 0 10px #f0a500aa;
+  }
 
-        .btn:hover {
-            background-color: #444;
-        }
+  .btn {
+    display: inline-block;
+    background: #f0a500;
+    color: #111;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 14px 32px;
+    margin: 15px 10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 15px #f0a500cc;
+    transition: all 0.3s ease;
+    user-select: none;
+  }
 
-        .note {
-            font-size: 14px;
-            color: #777;
-        }
-    </style>
+  .btn:hover {
+    background: #ffaa00;
+    box-shadow: 0 6px 20px #ffaa00dd;
+    transform: translateY(-3px);
+  }
+
+  .btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px #f0a500aa;
+  }
+
+  h2 {
+    margin-top: 40px;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #ddd;
+  }
+
+  .note {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #bbb;
+    line-height: 1.4;
+  }
+
+  /* Icon spacing */
+  .btn svg {
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+
+  @media (max-width: 460px) {
+    .container {
+      max-width: 90vw;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .btn {
+      font-size: 1rem;
+      padding: 12px 24px;
+    }
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>NVS | Scarica Gratis</h1>
-        <a href="tuofile.zip" download class="btn">📥 Scarica</a>
+  <div class="container" role="main" aria-label="Scarica album NVS">
+    <h1>NVS | Scarica Gratis</h1>
+    <a href="tuofile.zip" download class="btn" aria-label="Scarica album NVS">
+      📥 Scarica
+    </a>
 
-        <h2>Se vuoi supportare questo lavoro</h2>
-        <a href="https://revolut.me/mathiaul3d" target="_blank" class="btn">💸 Invia una donazione</a>
-        <p class="note">Non serve avere un account Revolut per inviare denaro.</p>
-    </div>
+    <h2>Se vuoi supportare questo lavoro</h2>
+    <a href="https://revolut.me/mathiaul3d" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Invia una donazione tramite Revolut">
+      💸 Invia una donazione
+    </a>
+    <p class="note">Progetto autofinanziato, un aiuto è gradito per migliorare sempre più!</p>
+  </div>
 </body>
 </html>
